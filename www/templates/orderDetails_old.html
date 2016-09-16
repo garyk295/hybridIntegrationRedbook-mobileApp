@@ -1,0 +1,25 @@
+<ion-view view-title="Order Details">
+  <ion-content>
+
+    <div class="list card" ng-repeat="event in orderDetails">
+
+      <div class="item">
+        <h2>{{event.eventId}}</h2>
+        <p>{{event.time}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src={{order.imageUrl}}>
+        <p>
+          iPhone 6S - the best phone in the world
+        </p>
+        <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>
