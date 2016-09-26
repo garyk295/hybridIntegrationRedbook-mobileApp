@@ -5,7 +5,7 @@
 
     <div class="list card">
 
-      <a href="#" class="item item-icon-left">
+      <a class="item item-icon-left positive">
         <i class="icon ion-ios-albums"></i>
         Total Orders: {{totalOrders}}
       </a>
@@ -18,7 +18,7 @@
 
     <div class="list card" ng-repeat="order in orders">
 
-           <a class="item item-icon-left calm" href="#/app/orderDetails?theId={{order.orderId}}&amp;description={{order.description}}">
+           <a class="item item-icon-left positive" href="#/app/orderDetails?theId={{order.orderId}}&amp;description={{order.description}}">
              <i class="icon ion-cube"></i>
              {{order.orderId}}
            </a>

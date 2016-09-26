@@ -1,10 +1,19 @@
 // Ionic Starter App
 
+
+var env = {};
+
+// Import variables if present (from env.js)
+if(window){
+  Object.assign(env, window.__env);
+}
+
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers'])
+
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -27,13 +36,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
     .state('app', {
     url: '/app',
+    cache: false,
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
 
+  .state('app.configuration', {
+    url: '/configuration',
+    cache: true,
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/configuration.html',
+        controller: 'ConfigurationCtrl'
+      }
+    }
+  })
+
   .state('app.orders', {
     url: '/orders',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/orders.html',
@@ -44,6 +66,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   .state('app.orderDetails', {
     url: '/orderDetails',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/orderDetails.html',
@@ -54,6 +77,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   .state('app.search', {
     url: '/search',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/search.html'
@@ -61,5 +85,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/orders');
+  $urlRouterProvider.otherwise('/app/configuration');
 });
