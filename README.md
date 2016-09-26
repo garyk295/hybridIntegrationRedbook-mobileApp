@@ -1,4 +1,5 @@
 Pre-req: 
+
 1. Node.js  
 2. xCode or Android Studio (optional) 
 
@@ -26,3 +27,5 @@ If you don't have xCode or Android Studio, run the app in the browser by running
 ```bash
 $ ionic serve
 ```
+
+No modification has to be made to the code in order to run it.  The  settings page in the app allows you to point to your API and  provide the client secret and ID.
