@@ -9,11 +9,7 @@ angular.module('starter.controllers', [])
 .controller('ConfigurationCtrl', ['$rootScope', '$state', '$ionicHistory', function($rootScope, $state, $ionicHistory) {
 
   $rootScope.api = {};
-  //DELETE BELOW
-  $rootScope.api.endpoint = 'https://api.eu.apiconnect.ibmcloud.com/cmarcoliukibmcom-sandpit/sb/api/';
-  $rootScope.api.clientId = '934e080e-25ca-4c00-b904-843ec01f39f9';
-  $rootScope.api.secret = 'rA2pI3bX5yL6sM2vW7fA5rQ1pC0yO5lR6eB0hK3hT6bS5fR1eI';
-  //
+
 
 
   $rootScope.setEndpoint = function() {
